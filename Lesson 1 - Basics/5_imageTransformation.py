@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img =cv2.imread('Photos/park.jpg')
+img =cv2.imread('..\Photos/park.jpg')
 
 cv2.imshow('Park',img)
 
@@ -25,7 +25,7 @@ def rotate(img, angle, rotPoint=None):
     if rotPoint is None:
         rotPoint=(width//2,height//2)
     
-    rotMat = cv2.getRotationMatrix2D(rotPoint,angle,1.0)
+    rotMat = cv2.getRotationMatrix2D(rotPoint,angle,scale=1.0)
     dimensions =(width,height)
 
     return cv2.warpAffine(img,rotMat,dimensions)
@@ -37,6 +37,15 @@ cv2.imshow('Rotate',rotated)
 #flipping
 flip=cv2.flip(img,-1)
 #-1 flips vertically and horizonatally 
+
+'''
+ A flag to specify how to flip the array; 
+ 0 means flipping around the x-axis and 
+ positive value (for example, 1) means 
+ flipping around y-axis. Negative value
+  (for example, -1) means flipping around 
+  both axes.
+'''
 
 #cropping 
 cropped = img[200:400,200:400]
