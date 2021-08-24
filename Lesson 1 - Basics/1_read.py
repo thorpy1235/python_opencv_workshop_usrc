@@ -5,6 +5,7 @@ import numpy
 img = cv2.imread('..\Photos\cat.jpg')
 cv2.imshow('Cat', img)
 
+
 # reading videos
 
 capture = cv2.VideoCapture('..\Videos\dog.mp4')
@@ -23,5 +24,6 @@ while True:
 
 capture.release()
 cv2.destroyAllWindows()
+
 
 cv2.waitKey(0)
