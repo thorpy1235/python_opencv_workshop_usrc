@@ -39,7 +39,7 @@ In lesson 1, we'll be going over how to include OpenCV in your Python projects a
 ## Lesson 1 - Challenge
 Be able to open and read both an image and a video of your choosing (can be taken off the Internet)
 
-## Lesson 2 - Challenge
+## Lesson 1.1 - Challenge
 Take an image of your choice (could be from the Internet or your own) and perform the following operations in separate instances (so don't do everything at once to the poor image).
 
 - Rescale it to be half the original size
