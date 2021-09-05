@@ -47,4 +47,9 @@ Take an image of your choice (could be from the Internet or your own) and perfor
 - Pass it through a greyscale, blur and then canny layer
 - Rotate it by 45 degrees
 
+## Lesson 2 -Challenge
+Choose an option:
+- Challenge: Instead of filtering for the heart, instead filter for a pentagon, look in the file folder!
+- Challenge: Draw the grid lines of the sudoku image by detecting the lines using a Hough transform. Use image sudoku.png from the Github.
+- Challenge: Determine the road lane lines from a given image an drawing line onto them.  Use the provided image lane_img.jpg from the Github as your testing image. 
 
