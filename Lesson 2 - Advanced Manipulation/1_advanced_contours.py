@@ -1,8 +1,7 @@
 """
 Shape Finding 
-Now, there's a lot of noise so far, because rightfully so there are a lot of edges from things that are 
-not our shapes. We still need to find our lovehearts! To do this, we need to know which of these edge pixels 
-should be grouped together to form actual shapes. Of course, there is a function for this:
+The objective is to determine the location of some shape targets on an image. 
+To do this, we perform line detection on the image and extract contours.
 """
 
 import cv2
