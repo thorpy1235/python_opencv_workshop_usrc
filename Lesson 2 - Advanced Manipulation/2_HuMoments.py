@@ -11,12 +11,12 @@ to our advantage here.
 import cv2
 import numpy as np
 
-frame = cv2.imread ('..\Photos/collage.png')
+frame = cv2.imread ('../Photos/collage.png')
 edges = cv2.Canny(frame,100,200) # This uses the canny edge detector. The 100 and 200 are rather arbitrary parameters; the second should be larger than the first, play around to see what numbers work best for each image.
 
 
 # Load another heart from a template
-heart = cv2.imread('..\Photos\heart.png')
+heart = cv2.imread('../Photos/heart.png')
 heartCanny = cv2.Canny(heart,100,200) #make a canny
 heartContours, hierarchy = cv2.findContours(heartCanny,cv2.RETR_LIST,cv2.CHAIN_APPROX_NONE) #find the contours of our heart image
 #hierarchy denotes which contours are parents and the children of those parent contours
