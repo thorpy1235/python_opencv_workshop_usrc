@@ -53,3 +53,7 @@ Choose an option:
 - Challenge: Draw the grid lines of the sudoku image by detecting the lines using a Hough transform. Use image sudoku.png from the Github.
 - Challenge: Determine the road lane lines from a given image an drawing line onto them.  Use the provided image lane_img.jpg from the Github as your testing image. 
 
+## Lesson 3 - Challenge
+- Find an image off the Internet and try to adjust the thresholds to detect the most amount of faces
+- Train the face recognition model to accept another celebrity as an input
+
