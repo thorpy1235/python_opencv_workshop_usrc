@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img =cv2.imread('Photos/treetops.jpg')
+img =cv2.imread('../Photos/lady.jpg')
 cv2.imshow('Lady',img)
 
 #convert to greyscale
