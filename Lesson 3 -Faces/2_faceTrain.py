@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 
 people=[]
 
+DIR=r'..\\Faces\\train'
 #create list of names by looping through names of folders
-for i in os.listdir(r'C:\Users\marco\OneDrive\Documents\Python\OpenCV Practice\freeCodeCamp Tutorial\Faces\train'):
+for i in os.listdir(DIR):
     people.append(i)
 print(people)
 
-DIR=r'C:\Users\marco\OneDrive\Documents\Python\OpenCV Practice\freeCodeCamp Tutorial\Faces\train'
 
 #store the haar face database to haarCascade
 haarCascade=cv2.CascadeClassifier('haar_face.xml')
