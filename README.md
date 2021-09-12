@@ -54,6 +54,5 @@ Choose an option:
 - Challenge: Determine the road lane lines from a given image an drawing line onto them.  Use the provided image lane_img.jpg from the Github as your testing image. 
 
 ## Lesson 3 - Challenge
-- Find an image off the Internet and try to adjust the thresholds to detect the most amount of faces
-- Train the face recognition model to accept another celebrity as an input
+- Consider `Faces/usrc_all.png` and `Faces/usrc_cropped.png`. Using the face detection in part 1, tune the face detection so that all the faces in the cropped version are accounted for and there are no extra faces in the uncropped version. (Except for the clock. Apparently the clock looks like a face.)
 
