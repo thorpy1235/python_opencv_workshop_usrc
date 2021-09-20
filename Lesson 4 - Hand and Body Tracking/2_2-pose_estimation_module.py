@@ -8,7 +8,7 @@ class poseDetector():
     def __init__(self,mode=False,complexity=1,smooth=True,
                 detectConfidence=0.5,trackConfidence=0.5):
 
-        #define attributes
+        #define attributes (same as mediapipe Pose())
         self.mode=mode
         self.complexity=complexity
         self.smooth=smooth
@@ -90,7 +90,7 @@ class poseDetector():
 
 
 def main():
-    cap =  cv2.VideoCapture('PoseVideos/1.mp4')
+    cap =  cv2.VideoCapture('../PoseVideos/1.mp4')
 
     pTime =0 #previous time
     cTime =0    #current time
@@ -107,8 +107,9 @@ def main():
 
         #find positional data
         lmList=pose.findPosition(img)
-        if len(lmList) != 0:
-            print(lmList[0])
+
+        #if len(lmList) != 0:
+        #    print(lmList[0])
 
 
         #determine fps
@@ -123,7 +124,12 @@ def main():
         #display image
         cv2.imshow('Video',img)
 
-        cv2.waitKey(1)
+        #if the d key is pressed, kill screen
+        if cv2.waitKey(1) & 0xFF==ord('d'):
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     main()

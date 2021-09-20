@@ -2,13 +2,16 @@ import cv2
 import mediapipe as mp
 import time
 
-cap =  cv2.VideoCapture('PoseVideos/6.mp4')
+'''for more info, visit:
+https://google.github.io/mediapipe/solutions/pose.html'''
+
+cap =  cv2.VideoCapture('../PoseVideos/6.mp4')
 
 cTime=0
 pTime=0
 
-mpPose = mp.solutions.pose
-pose = mpPose.Pose()
+mpPose = mp.solutions.pose #define the function path to .pose
+pose = mpPose.Pose() #create an object from Pose()
 mpDraw = mp.solutions.drawing_utils
 
 
@@ -51,4 +54,9 @@ while True:
     #display image
     cv2.imshow('Video',img)
 
-    cv2.waitKey(1)
+    #if the d key is pressed, kill screen
+    if cv2.waitKey(1) & 0xFF==ord('d'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()

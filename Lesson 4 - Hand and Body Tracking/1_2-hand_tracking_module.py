@@ -8,6 +8,7 @@ import numpy as np
 
 class handDetector():
     def __init__(self,mode=False,maxHands=2,detectionConfidence=0.5,trackConfidence=0.5):
+        #same parameters for Hand() object in mediapipe
         self.mode=mode
         self.maxHands =maxHands
         self.detectionConfidence = detectionConfidence
@@ -18,7 +19,7 @@ class handDetector():
                                          self.detectionConfidence, self.trackConfidence)
         self.mpDraw = mp.solutions.drawing_utils
 
-        self.tipIds = [4,8,12,16,20]
+        self.tipIds = [4,8,12,16,20] #ids for fingertips
 
     def findHands(self,img,draw=True):
         #convert to RGB
@@ -59,6 +60,7 @@ class handDetector():
 
         return self.lmList
 
+    #method to check if fingers are open or closed
     def fingersUp(self):
         fingers = []
 
@@ -95,6 +97,7 @@ def main():
         #find position
         lmList= detector.findPosition(img,draw=False)
 
+        #print location of palm
         if len(lmList) != 0:
             print(lmList[0])
 
@@ -110,7 +113,12 @@ def main():
         #cv2.imshow("Black screen",black_screen)
         #black_screen = np.zeros((512,512,3),dtype='uint8')
 
-        cv2.waitKey(1)
+        #if the d key is pressed, kill screen
+        if cv2.waitKey(20) & 0xFF==ord('d'):
+            break
+
+    cap.release()
+    cv2.destroyAllWindows()
 
 
 
