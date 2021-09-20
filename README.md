@@ -60,4 +60,4 @@ Choose an option:
 ## Lesson 4 - Challenge
 - Easy: Take a screenshot of yourself holding up 3 fingers in the hand tracking.
 - Medium: Develop a module that shows the pose points for a person on screen but ignores the points on their head.
-- Hard: Create a program that displays how many fingers are being held up in video.
+- Hard: Create a paint program that allows you to draw on screen based on how many fingers you're holding up.
